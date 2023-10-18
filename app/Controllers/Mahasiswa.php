@@ -30,10 +30,26 @@ class Mahasiswa extends BaseController
 
         }else return view('tambah_mahasiswa');
     }
-    public function ubah($id)
+    public function ubah($id=null)
     {
-        $data['item'] = $this->mhs->where("kode", $id)->first();
-        return view("ubah_mahasiswa", $data);
+        $item = $this->request->getPost();
+        if (isset($item['ubah'])) {
+            $item = $this->request->getPost();
+            if (count($item) > 0) {
+                try {
+                    $value = [
+                        "mahasiswa"=>$item['mahasiswa'],
+                    ];
+                    $this->mhs->update($id,$value);
+                    return redirect()->to(base_url('mahasiswa'));
+                } catch (\Throwable $th) {
+                    //throw $th;
+                }
+            }
+        }else{
+            $item['item'] = $this->mhs->where('kode', $id)->first();
+            return view('ubah_mahasiswa', $item);
+        } 
     }
     public function hapus($id)
     {
