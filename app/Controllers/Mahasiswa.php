@@ -15,7 +15,7 @@ class Mahasiswa extends BaseController
     public function index()
     {
         $data['mahasiswa'] = $this->mhs->findAll();
-        return view("mahasiswa", $data);
+        return view("mhs/mahasiswa", $data);
     }
     public function tambah()
     {
@@ -24,7 +24,7 @@ class Mahasiswa extends BaseController
         if(isset($data["tambah"])){
             $this->mhs->insert($data);
             return redirect()->to(base_url('mahasiswa'));
-        }else return view('tambah_mahasiswa');
+        }else return view('mhs/tambah_mahasiswa');
     }
     public function ubah($id=null)
     {

@@ -5,6 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+$routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->group('jurusan', function($routes){
     $routes->get('/', 'Jurusan::index');

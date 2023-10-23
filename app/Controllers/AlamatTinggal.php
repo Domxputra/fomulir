@@ -15,7 +15,7 @@ class AlamatTinggal extends BaseController
     public function index()
     {
         $data['alamat_tinggal'] = $this->at->findAll();
-        return view("alamat_tinggal", $data);
+        return view("at/alamat_tinggal", $data);
     }
     public function tambah()
     {
