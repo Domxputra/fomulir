@@ -20,7 +20,7 @@ class AlamatTinggal extends BaseController
     public function tambah()
     {
         $item = $this->request->getPost();
-        if(count($item)>0){
+        if(count($item)> 0 ){
             try {
                 $this->at->insert($item);
                 return redirect()->to(base_url('alamat_tinggal'));
@@ -28,11 +28,11 @@ class AlamatTinggal extends BaseController
                 //throw $th;
             }
 
-        }else return view('tambah_alamat_tinggal');
+        }else return view("tambah_alamat_tinggal");
     }
     public function ubah($id)
     {
-        $data['item'] = $this->at->where("kode", $id)->first();
+        $data['item'] = $this->at->where("id", $id)->first();
         return view("ubah_alamat_tinggal", $data);
     }
     public function hapus($id)

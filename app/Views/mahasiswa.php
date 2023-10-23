@@ -13,7 +13,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between">
                 <h4>Daftar Alamat Tinggal</h4>
-                <a href="<?= base_url('mahasiswa/tambah') ?>" class="btn btn-info btn-sm">Tambah</a>
+                <a href="<?= base_url('tambah_mahasiswa') ?>" class="btn btn-info btn-sm">Tambah</a>
             </div>
             <div class="card-body">
                 <table class="table table-bordered">

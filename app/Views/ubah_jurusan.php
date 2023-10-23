@@ -19,7 +19,7 @@
                 <form action="">
                     <div class="form-group">
                       <label for="">Jurusan</label>
-                      <input type="text" value="<?= $item->jrs?>"
+                      <input type="text" value="<?= $data->jrs?>"
                         class="form-control" name="jurusan"  placeholder="masukkan jurusan">
                     </div>
                     
