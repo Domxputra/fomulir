@@ -15,7 +15,7 @@ class Mahasiswa extends BaseController
     public function index()
     {
         $data['mahasiswa'] = $this->mhs->findAll();
-        return view("mhs/mahasiswa", $data);
+        return view("mahasiswa/mahasiswa", $data);
     }
     public function tambah()
     {
@@ -24,7 +24,7 @@ class Mahasiswa extends BaseController
         if(isset($data["tambah"])){
             $this->mhs->insert($data);
             return redirect()->to(base_url('mahasiswa'));
-        }else return view('mhs/tambah_mahasiswa');
+        }else return view('mahasiswa/tambah');
     }
     public function ubah($id=null)
     {
@@ -34,7 +34,16 @@ class Mahasiswa extends BaseController
             if (count($item) > 0) {
                 try {
                     $value = [
-                        "mahasiswa"=>$item['mahasiswa'],
+                        "nama_lengkap"=>$item['nama_lengap'],
+                        "tanggal_lahir"=>$item['tanggal_lahir'],
+                        "jenis_kelamin"=>$item['jenis_kelamin'],
+                        "asal_sma"=>$item['asal_sma'],
+                        "email_mhs_baru"=>$item['email_mhs_baru'],
+                        "no_tlp"=>$item['no_tlp'],
+                        "status"=>$item['status'],
+                        "kode_pos"=>$item['kode_pos'],
+                        "sumber_biaya"=>$item['sumber_biaya'],
+                        "informasi"=>$item['informasi'],
                     ];
                     $this->mhs->update($id,$value);
                     return redirect()->to(base_url('mahasiswa'));
@@ -43,8 +52,8 @@ class Mahasiswa extends BaseController
                 }
             }
         }else{
-            $item['item'] = $this->mhs->where('kode', $id)->first();
-            return view('ubah_mahasiswa', $item);
+            $item['item'] = $this->mhs->where('nik', $id)->first();
+            return view('mahasiswa/ubah_mahasiswa', $item);
         } 
     }
     public function hapus($id)

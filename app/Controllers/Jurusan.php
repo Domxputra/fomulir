@@ -15,7 +15,7 @@ class Jurusan extends BaseController
     public function index()
     {
         $data['jurusan'] = $this->jrs->findAll();
-        return view("jurusan", $data);
+        return view("jurusan/jurusan", $data);
     }
     public function tambah()
     {
@@ -28,7 +28,7 @@ class Jurusan extends BaseController
                 //throw $th;
             }
 
-        }else return view('tambah_jurusan');
+        }else return view('jurusan/tambah_jurusan');
     }
    
     public function ubah($id=null)
