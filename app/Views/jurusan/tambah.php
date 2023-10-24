@@ -19,16 +19,10 @@
             </div>
             <div class="card-body">
                 <form action="">
-                    <div class="form-group">
-                        <label for="">Jurusan</label>
-                        <select class="form-control" id="" name="jurusan">
-                            <option value="option1">Informatika</option>
-                            <option value="option2">Sistem Informasi</option>
-                            <option value="option3">Teknologi Pangan & hasil Pertanian</option>
-                            <option value="option3">manajemen</option>
-                            <option value="option3">Hukum</option>
-                            <!-- Add more options as needed -->
-                        </select>
+                    <<div class="form-group">
+                    <label for="">Jurusan</label>
+                    <input type="text" class="form-control" name="jurusan" placeholder="masukkan jurusan">
+                </div>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-primary btn-sm">Simpan</button>

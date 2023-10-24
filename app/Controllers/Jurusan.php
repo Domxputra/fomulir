@@ -28,7 +28,7 @@ class Jurusan extends BaseController
                 //throw $th;
             }
 
-        }else return view('jurusan/tambah_jurusan');
+        }else return view('jurusan/tambah');
     }
    
     public function ubah($id=null)
@@ -49,7 +49,7 @@ class Jurusan extends BaseController
             }
         }else{
             $item['item'] = $this->jrs->where('kode', $id)->first();
-            return view('ubah_jurusan', $item);
+            return view('jurusan/ubah_jurusan', $item);
         } 
     } 
     public function hapus($id)
