@@ -14,18 +14,15 @@
         <form action="<?= base_url('mahasiswa/ubah').'/'.$item->nik?>" method="post">
           <div class="form-group">
             <label for="">Nama Lengkap</label>
-            <input type="text" value="<?= $item->nama?>"
-              class="form-control" name="nama" aria-describedby="helpId" placeholder="nama">
+            <input type="text" class="form-control" name="nama" aria-describedby="helpId" placeholder="nama">
           </div>
           <div class="form-group">
             <label for="">Kontak</label>
-            <input type="text" value="<?= $item->kontak?>"
-              class="form-control" name="kontak" aria-describedby="helpId" placeholder="Input Kontak">
+            <input type="text" class="form-control" name="kontak" aria-describedby="helpId" placeholder="Input Kontak">
           </div>
           <div class="form-group">
             <label for="">Email</label>
-            <input type="email" value="<?= $item->email?>"
-              class="form-control" name="email" aria-describedby="helpId" placeholder="input email">
+            <input type="email" class="form-control" name="email" aria-describedby="helpId" placeholder="input email">
           </div>
           <div class="form-group">
             <label for="">Alamat</label>

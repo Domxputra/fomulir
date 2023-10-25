@@ -18,7 +18,7 @@
                 <h4>Tambah Mahasiswa</h4>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('mahasiswa/tambah')?>" method="post">
+                <form action="" method="post">
                 <div class="form-group">
                     <label for="">Nama Lengkap</label>
                     <input type="text" class="form-control" name="nama_lengap" placeholder="masukkan masukan nama lengkap">

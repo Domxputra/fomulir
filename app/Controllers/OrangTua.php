@@ -13,30 +13,50 @@ class OrangTua extends BaseController
     }
     public function index()
     {
-        $data['orang_tua'] =  $this->ot->findAll();
-        return view("orang_tua", $data);
+        $data['orangtua'] =  $this->ot->findAll();
+        return view("ot/orangtua", $data);
     }
     public function tambah()
     {
         $item = $this->request->getPost();
-        if(count($item)>0){
+        if(count($item)> 0 ){
             try {
                 $this->ot->insert($item);
-                return redirect()->to(base_url('orang_tua'));
+                return redirect()->to(base_url('orangtua'));
             } catch (\Throwable $th) {
                 //throw $th;
             }
 
-        }else return view('tambah_orang_tua');
+        }else return view('orangtua/tambah');
     }
     public function ubah($id)
     {
-        $data['item'] = $this->ot->where("id_orang_tua", $id)->first();
-        return view("ubah_orang_tua", $data);
+        $item = $this->request->getPost();
+        if (isset($item['orangtua'])) {
+            $item = $this->request->getPost();
+            if (count($item) > 0) {
+                try {
+                    $value = [
+                        "nik_ayah"=>$item['nik_ayah'],
+                        "nik_ibu"=>$item['nik_ibu'],
+                        "nama_ayah"=>$item['nama_ayah'],
+                        "nama_ibu"=>$item['nama_ibu'],
+                        "alamat"=>$item['alamat'],
+                    ];
+                    $this->ot->update($id,$value);
+                    return redirect()->to(base_url('orangtua'));
+                } catch (\Throwable $th) {
+                    //throw $th;
+                }
+            }
+        }else{
+            $item['item'] = $this->ot->where('id_orang_tua', $id)->first();
+            return view('ot/ubah', $item);
+        } 
     }
     public function hapus($id)
     {
         $this->ot->delete($id);
-        return redirect()->to(base_url("orang_tua"));
+        return redirect()->to(base_url("orangtua"));
     }
 }

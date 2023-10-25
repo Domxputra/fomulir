@@ -16,7 +16,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between">
                 <h4>Daftar Orang Tua</h4>
-                <a href="<?= base_url('orang_tua/tambah') ?>" class="btn btn-info btn-sm">Tambah</a>
+                <a href="<?= base_url('ot/tambah') ?>" class="btn btn-info btn-sm">Tambah</a>
             </div>
             <div class="card-body">
                 <table class="table table-bordered ">
@@ -29,7 +29,7 @@
                         <th>Alamat</th>
                         <th>Action</th>
                     </tr>
-                    <?php foreach ($orang_tua as $key => $item) : ?>
+                    <?php foreach ($orangtua as $key => $item) : ?>
                         <td><?= $key + 1 ?></td>
                         <td><?= $item['nik_ayah'] ?></td>
                         <td><?= $item['nama_ayah'] ?></td>
@@ -37,8 +37,8 @@
                         <td><?= $item['nama_ibu'] ?></td>
                         <td><?= $item['alamat'] ?></td>
                         <td>
-                            <a href="<?= base_url("orang_tua/ubah/") . $item['id_orang_tua'] ?>" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="<?= base_url("orang_tua/hapus/") . $item['id_orang_tua'] ?>" class="btn btn-danger btn-sm">Hapus</a>
+                            <a href="<?= base_url("ot/ubah/") . $item['id_orang_tua'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="<?= base_url("ot/hapus/") . $item['id_orang_tua'] ?>" class="btn btn-danger btn-sm">Hapus</a>
                         </td>
                     <?php endforeach; ?>
                 </table>

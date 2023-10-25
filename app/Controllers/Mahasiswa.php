@@ -19,11 +19,15 @@ class Mahasiswa extends BaseController
     }
     public function tambah()
     {
-        $data = $this->request->getPost();
-        
-        if(isset($data["tambah"])){
-            $this->mhs->insert($data);
-            return redirect()->to(base_url('mahasiswa'));
+        $item = $this->request->getPost();
+        if(count($item)> 0 ){
+            try {
+                $this->mhs->insert($item);
+                return redirect()->to(base_url('mahasiswa'));
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+
         }else return view('mahasiswa/tambah');
     }
     public function ubah($id=null)

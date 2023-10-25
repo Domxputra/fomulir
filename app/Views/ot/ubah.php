@@ -13,8 +13,9 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h4>Tambah Orang Tua</h4>
+                <h4>Ubah Orang Tua</h4>
             </div>
+            <form action="" method="post">
             <div class="card-body">
                     <div class="form-group">
                       <label for="">NIK Ayah</label>
@@ -32,13 +33,13 @@
                         class="form-control" name="nik_ibu" placeholder="masukkan nik ibu">
                     </div>
                     <div class="form-group">
-                      <label for="">Nama Ibu</label>
+                      <label for="">Nama Ayah</label>
                       <input type="text"
-                        class="form-control" name="nama_ibu" placeholder="masukkan nama ibu">
+                        class="form-control" name="nama_ibu" placeholder="masukkan nama ayah">
                     </div>
                     <div class="form-group">
                       <label for="">Alamat</label>
-                      <textarea name="almat" class="form-control"  rows="4" placeholder="Masukkan alamat"></textarea>
+                      <textarea name="alamat" class="form-control"  rows="4" placeholder="Masukkan alaamt"></textarea>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-primary btn-sm">Simpan</button>
