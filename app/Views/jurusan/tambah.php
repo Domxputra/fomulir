@@ -17,19 +17,19 @@
             <div class="card-header">
                 <h4>Tambah Jurusan</h4>
             </div>
-            <div class="card-body">
-                <form action="">
-                    <<div class="form-group">
-                    <label for="">Jurusan</label>
-                    <input type="text" class="form-control" name="jurusan" placeholder="masukkan jurusan">
+            <form action="" method="post">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="">Jurusan</label>
+                        <input type="text" class="form-control" name="jurusan" placeholder="masukkan jurusan">
+                    </div>
                 </div>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-primary btn-sm">Simpan</button>
-                    </div>
-                </form>
-            </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                </div>
+            </form>
         </div>
+    </div>
     </div>
 
     <!-- Optional JavaScript -->

@@ -23,7 +23,7 @@ class Jurusan extends BaseController
         if(count($item)> 0 ){
             try {
                 $this->jrs->insert($item);
-                return redirect()->to(base_url('jurusan/jurusan'));
+                return redirect()->to(base_url('jurusan'));
             } catch (\Throwable $th) {
                 //throw $th;
             }

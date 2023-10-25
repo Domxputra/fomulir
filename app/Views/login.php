@@ -58,7 +58,7 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="welcome_message.php" class="btn btn-primary btn-user btn-block">
+                                        <a href="<?= base_url('welocome_message.php')?>" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                                         <hr>
