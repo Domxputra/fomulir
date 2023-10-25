@@ -25,39 +25,39 @@
                 </div>
                 <div class="form-group">
                     <label for="">Tanggal Lair</label>
-                    <input type="text" class="form-control" name="tanggal_lahir" placeholder="masukkan Nama ayah">
+                    <input type="text" class="form-control" name="tanggal_lahir" placeholder="masukkan Tanggal Lahir">
                 </div>
                 <div class="form-group">
                     <label for="">Jenis Kelamin</label>
-                    <input type="text" class="form-control" name="jenis_kelamin" placeholder="masukkan Nama ayah">
+                    <input type="text" class="form-control" name="jenis_kelamin" placeholder="masukkan Jenis Kelamin">
                 </div>
                 <div class="form-group">
                     <label for="">Asal Sma/Smk/Stm</label>
-                    <input type="text" class="form-control" name="asal_sma" placeholder="masukkan nama ibu">
+                    <input type="text" class="form-control" name="asal_sma" placeholder="masukkan Asal Sma/SKM/STM">
                 </div>
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" class="form-control" name="email_mhs_baru" placeholder="masukkan nama ibu">
+                    <input type="text" class="form-control" name="email_mhs_baru" placeholder="masukkan Email">
                 </div>
                 <div class="form-group">
                     <label for="">No Telepon</label>
-                    <input type="text" class="form-control" name="no_tlp" placeholder="masukkan nama ibu">
+                    <input type="text" class="form-control" name="no_tlp" placeholder="masukkan No Telepon">
                 </div>
                 <div class="form-group">
                     <label>Status</label>
-                    <input type="text" class="form-control" name="status" placeholder="masukkan Nama ayah">
+                    <input type="text" class="form-control" name="status" placeholder="masukkan Status">
                 </div>
                 <div class="form-group">
                     <label for="">Kode Pos</label>
-                    <input type="text" class="form-control" name="kode_pos" placeholder="masukkan nama ibu">
+                    <input type="text" class="form-control" name="kode_pos" placeholder="masukkan Kode Pos">
                 </div>
                 <div class="form-group">
                     <label for="">Sumber Biaya</label>
-                    <input type="text" class="form-control" name="sumber_biaya" placeholder="masukkan Nama ayah">
+                    <input type="text" class="form-control" name="sumber_biaya" placeholder="masukkan Sumber Biaya">
                 </div>
                 <div class="form-group">
                     <label for="">Informasi</label>
-                    <input type="text" class="form-control" name="informasi" placeholder="masukkan Nama ayah">
+                    <input type="text" class="form-control" name="informasi" placeholder="masukkan Informasi">
                 </div>
                 
 
