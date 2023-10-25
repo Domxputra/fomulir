@@ -34,7 +34,7 @@ class Jurusan extends BaseController
     public function ubah($id=null)
     {
         $item = $this->request->getPost();
-        if (isset($item['ubah'])) {
+        if (isset($item['jurusan'])) {
             $item = $this->request->getPost();
             if (count($item) > 0) {
                 try {
@@ -52,6 +52,8 @@ class Jurusan extends BaseController
             return view('jurusan/ubah_jurusan', $item);
         } 
     } 
+
+    
     public function hapus($id)
     {
         $this->jrs->delete($id);
