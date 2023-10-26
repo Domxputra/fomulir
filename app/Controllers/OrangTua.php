@@ -14,7 +14,7 @@ class OrangTua extends BaseController
     public function index()
     {
         $data['orangtua'] =  $this->ot->findAll();
-        return view("ot/orangtua", $data);
+        return view("orangtua/orangtua", $data);
     }
     public function tambah()
     {
@@ -51,7 +51,7 @@ class OrangTua extends BaseController
             }
         }else{
             $item['item'] = $this->ot->where('id_orang_tua', $id)->first();
-            return view('ot/ubah', $item);
+            return view('orangtua/ubah', $item);
         } 
     }
     public function hapus($id)

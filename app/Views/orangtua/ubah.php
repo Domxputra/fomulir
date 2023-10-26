@@ -42,7 +42,7 @@
                       <textarea name="alamat" class="form-control"  rows="4" placeholder="Masukkan alaamt"></textarea>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary btn-sm">Simpan</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                     </div>
                 </form>
             </div>

@@ -33,7 +33,7 @@ class Mahasiswa extends BaseController
     public function ubah($id=null)
     {
         $item = $this->request->getPost();
-        if (isset($item['ubah'])) {
+        if (isset($item['mahasiswa'])) {
             $item = $this->request->getPost();
             if (count($item) > 0) {
                 try {

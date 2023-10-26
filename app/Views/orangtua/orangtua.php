@@ -16,7 +16,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between">
                 <h4>Daftar Orang Tua</h4>
-                <a href="<?= base_url('ot/tambah') ?>" class="btn btn-info btn-sm">Tambah</a>
+                <a href="<?= base_url('orangtua/tambah') ?>" class="btn btn-info btn-sm">Tambah</a>
             </div>
             <div class="card-body">
                 <table class="table table-bordered ">
@@ -37,8 +37,8 @@
                         <td><?= $item['nama_ibu'] ?></td>
                         <td><?= $item['alamat'] ?></td>
                         <td>
-                            <a href="<?= base_url("ot/ubah/") . $item['id_orang_tua'] ?>" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="<?= base_url("ot/hapus/") . $item['id_orang_tua'] ?>" class="btn btn-danger btn-sm">Hapus</a>
+                            <a href="<?= base_url("orangtua/ubah/") . $item['id_orang_tua'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="<?= base_url("orangtua/hapus/") . $item['id_orang_tua'] ?>" class="btn btn-danger btn-sm">Hapus</a>
                         </td>
                     <?php endforeach; ?>
                 </table>
