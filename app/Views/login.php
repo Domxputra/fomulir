@@ -1,3 +1,5 @@
+<?= $this->extend('layout') ?>
+<?= $this->section('content') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +60,7 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="<?= base_url('welocome_message.php')?>" class="btn btn-primary btn-user btn-block">
+                                        <a href="layout.php" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                                         <hr>
@@ -101,3 +103,4 @@
 </body>
 
 </html>
+<?= $this->endSection() ?>

@@ -41,7 +41,6 @@ class OrangTua extends BaseController
                         "nik_ibu"=>$item['nik_ibu'],
                         "nama_ayah"=>$item['nama_ayah'],
                         "nama_ibu"=>$item['nama_ibu'],
-                        "alamat"=>$item['alamat'],
                     ];
                     $this->ot->update($id,$value);
                     return redirect()->to(base_url('orangtua'));
@@ -50,7 +49,7 @@ class OrangTua extends BaseController
                 }
             }
         }else{
-            $item['item'] = $this->ot->where('id_orang_tua', $id)->first();
+            $item['item'] = $this->ot->where('orang_tua', $id)->first();
             return view('orangtua/ubah', $item);
         } 
     }

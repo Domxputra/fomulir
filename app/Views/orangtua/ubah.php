@@ -1,3 +1,5 @@
+<?= $this->extend('layout') ?>
+<?= $this->section('content') ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -37,10 +39,6 @@
                       <input type="text"
                         class="form-control" name="nama_ibu" placeholder="masukkan nama ayah">
                     </div>
-                    <div class="form-group">
-                      <label for="">Alamat</label>
-                      <textarea name="alamat" class="form-control"  rows="4" placeholder="Masukkan alaamt"></textarea>
-                    </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                     </div>
@@ -56,3 +54,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+<?= $this->endSection() ?>

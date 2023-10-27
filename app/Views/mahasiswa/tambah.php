@@ -1,3 +1,5 @@
+<?= $this->extend('layout') ?>
+<?= $this->section('content') ?>
 <!doctype html>
 <html lang="en">
 
@@ -75,3 +77,4 @@
 </body>
 
 </html>
+<?= $this->endSection() ?>

@@ -1,3 +1,5 @@
+<?= $this->extend('layout') ?>
+<?= $this->section('content') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header d-flex justify-content-between">
-                <h4>Daftar Alamat Tinggal</h4>
+                <h4>Daftar Mahasiswa</h4>
                 <a href="<?= base_url('mahasiswa/tambah') ?>" class="btn btn-info btn-sm">Tambah</a>
             </div>
             <div class="card-body">
@@ -20,13 +22,11 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Lengap</th>
-                        <th>Tanggal Lahir</th>
                         <th>Jenis Kelamin</th>
+                        <th>Tanggal Lahir</th>
                         <th>Asal Sma/Smk/Stm</th>
-                        <th>Email</th>
                         <th>No Telepon</th>
-                        <th>Status</th>
-                        <th>Kode Pos</th>
+                        <th>Email</th>
                         <th>Sumber Biaya</th>
                         <th>Informasi</th>
                         <th>Actions</th>
@@ -40,8 +40,6 @@
                             <td><?= $item['asal_sma'] ?></td>
                             <td><?= $item['email_mhs_baru'] ?></td>
                             <td><?= $item['no_tlp'] ?></td>
-                            <td><?= $item['status'] ?></td>
-                            <td><?= $item['kode_pos'] ?></td>
                             <td><?= $item['sumber_biaya'] ?></td>
                             <td><?= $item['informasi'] ?></td>
                             <td>
@@ -62,3 +60,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+<?= $this->endSection() ?>
