@@ -6,7 +6,6 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->setAutoRoute(true);
-$routes->get('/', 'login::index');
 $routes->get('/', 'Home::index');
 $routes->group('jurusan', function($routes){
     $routes->get('/', 'Jurusan::index');
@@ -22,11 +21,11 @@ $routes->group('orang_tua', function($routes){
     $routes->add('hapus/(:any)', 'OrangTua::hapus/$1');
 });
 
-$routes->group('alamat_tinggal', function($routes){
-    $routes->get('/', 'Alamattinggal::index');
-    $routes->add('tambah', 'AlamatTinggal::tambah');
-    $routes->add('ubah/(:any)', 'AlamatTinggal::ubah/$1');
-    $routes->add('hapus/(:any)', 'AlamatTinggal::hapus/$1');
+$routes->group('alamat', function($routes){
+    $routes->get('/', 'Alamat::index');
+    $routes->add('tambah', 'Alamat::tambah');
+    $routes->add('ubah/(:any)', 'Alamat::ubah/$1');
+    $routes->add('hapus/(:any)', 'Alamat::hapus/$1');
 });
 
 $routes->group('mahasiswa', function($routes){
