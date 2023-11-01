@@ -14,13 +14,17 @@ class Mahasiswa extends BaseController
     }
     public function index()
     {
-        $data['mahasiswa'] = $this->mhs->findAll();
-        return view("mahasiswa/mahasiswa", $data);
+        $ $data = [
+            'mahasiswa' => $this->mhs->findAll(),
+            'title' => "mahasiswa"
+        ];
+        // dd($data);
+        return view('mahasiswa/mahasiswa', $data);
     }
     public function tambah()
     {
         $item = $this->request->getPost();
-        if(count($item)> 0 ){
+        if(count($item)>0){
             try {
                 $this->mhs->insert($item);
                 return redirect()->to(base_url('mahasiswa'));

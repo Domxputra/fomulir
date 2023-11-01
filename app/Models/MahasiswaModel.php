@@ -10,7 +10,7 @@ class MahasiswaModel extends Model
     protected $table            = 'mahasiswa';
     protected $primaryKey       = 'nik';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
+    protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = ["nama_lengkap", "tanggal_lahir", "jenis_kelamin", "asal_sma", "email_mhs_baru", "no_tlp", "sumber_biaya", "informasi"];

@@ -8,18 +8,23 @@ use App\Models\AlamatTinggalModel;
 class AlamatTinggal extends BaseController
 {
     protected $at;
-    public function __construct() {
+    public function __construct()
+    {
         $this->at = new AlamatTinggalModel();
     }
     public function index()
     {
-        $data['alamat'] =  $this->at->findAll();
-        return view("alamat/alamat", $data);
+        $data = [
+            'alamat' => $this->at->findAll(),
+            'title' => "Alamat"
+        ];
+        // dd($data);
+        return view('alamat/alamat', $data);
     }
     public function tambah()
     {
         $item = $this->request->getPost();
-        if(count($item)> 0 ){
+        if(count($item)>0){
             try {
                 $this->at->insert($item);
                 return redirect()->to(base_url('alamat'));
@@ -32,7 +37,7 @@ class AlamatTinggal extends BaseController
     public function ubah($id)
     {
         $item = $this->request->getPost();
-        if (isset($item['alamat'])) {
+        if (isset($item['ubah'])) {
             $item = $this->request->getPost();
             if (count($item) > 0) {
                 try {
@@ -49,10 +54,10 @@ class AlamatTinggal extends BaseController
                 }
             }
         }else{
-            $item['item'] = $this->at->where('alamat', $id)->first();
+            $item['item'] = $this->at->where('kode', $id)->first();
             return view('alamat/ubah', $item);
         } 
-    }
+}
     public function hapus($id)
     {
         $this->at->delete($id);

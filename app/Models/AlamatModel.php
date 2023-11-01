@@ -10,8 +10,8 @@ class AlamatTinggalModel extends Model
     protected $table            = 'alamat_tinggal';
     protected $primaryKey       = 'kode';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
+    protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["jalan","kelurahan", "rt_rw", "kdde_pos"];
+    protected $allowedFields    = ["jalan","kelurahan", "rt_rw", "kode_pos"];
 }
