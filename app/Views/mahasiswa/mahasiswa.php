@@ -31,14 +31,14 @@
                   <tr>
                     <td>
                       <?= $key + 1 ?></td>
-                    <td><?= $item->nama_lengkap ?></td>
-                    <td><?= $item->tanggal_lahir?></td>
-                    <td><?= $item->jenis_kelamin?></td>
-                    <td><?= $item->asal_sma ?></td>
-                    <td><?= $item->email_mhs_baru?></td>
-                    <td><?= $item->no_tlp?></td>
-                    <td><?= $item->sumber_biaya?></td>
-                    <td><?= $item->informasi ?></td>
+                    <td><?= $item['nama_lengkap'] ?></td>
+                    <td><?= $item['tanggal_lahir'] ?></td>
+                    <td><?= $item['jenis_kelamin'] ?></td>
+                    <td><?= $item['asal_sma'] ?></td>
+                    <td><?= $item['email_mhs_baru'] ?></td>
+                    <td><?= $item['no_tlp'] ?></td>
+                    <td><?= $item['sumber_biaya'] ?></td>
+                    <td><?= $item['informasi'] ?></td>
                     <td>
                     <a href="<?= base_url('mahasiswa/ubah').'/'.$item->kode?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" aria-hidden="true"></i></a>
                     <a href="<?= base_url('mahasiswa/hapus').'/'.$item->kode?>" class="btn btn-danger btn-sm"><i class="fas fa-trash" aria-hidden="true"></i></a>

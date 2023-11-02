@@ -1,8 +1,5 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
-<style>
-    
-</style>
     <div class="container">
         <div class="card">
             <div class="card-header">
