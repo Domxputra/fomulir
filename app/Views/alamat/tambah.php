@@ -1,45 +1,40 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
-<!doctype html>
-<html lang="en">
-
-<head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body style="background-color: gray;">
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h4>Tambah Alamat</h4>
-            </div>
-            <form action="" method="post">
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="">Alamat</label>
-                        <input type="text" class="form-control" name="jurusan" placeholder="masukkan jurusan">
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
-                </div>
-            </form>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="d-flex justify-content-between">
+          <h4>Tambah alamat</h4>
         </div>
-    </div>
+      </div>
+      <div class="card-body">
+        <form action="<?= base_url('vendor/ubah').'/'.$item->idvendor?>" method="post">
+          <div class="form-group">
+            <label for="">Jalan</label>
+            <input type="text" value="<?= $item->jalan?>"
+              class="form-control" name="jalan" aria-describedby="helpId" placeholder="Nama Jalan">
+          </div>
+          <div class="form-group">
+            <label for="">Kelurahan</label>
+            <input type="text" value="<?= $item->kelurahan?>"
+              class="form-control" name="kelurahan" aria-describedby="helpId" placeholder="Kelurahan">
+          </div>
+          <div class="form-group">
+            <label for="">RT/RW</label>
+            <input type="text" value="<?= $item->rt_rw?>"
+              class="form-control" name="rt_rw" aria-describedby="helpId" placeholder="masukan RT & RW">
+          </div>
+          <div class="form-group">
+            <label for="">Kode Pos</label>
+            <input type="text" value="<?= $item->kode_pos?>"
+              class="form-control" name="kode_pos" aria-describedby="helpId" placeholder="masukan RT & RW">
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm" name="ubah">Simpan</button>
+        </form>
+      </div>
+      <!-- /.panel-body -->
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-
-</html>
-<?= $this->endSection() ?>
+  </div>
+  <?= $this->endSection() ?>

@@ -14,12 +14,8 @@ class AlamatTinggal extends BaseController
     }
     public function index()
     {
-        $data = [
-            'alamat' => $this->at->findAll(),
-            'title' => "Alamat"
-        ];
-        // dd($data);
-        return view('alamat/alamat', $data);
+        $data['alamat'] = $this->at->findAll();
+        return view("alamat/alamat", $data);
     }
     public function tambah()
     {
