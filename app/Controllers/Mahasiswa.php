@@ -20,7 +20,7 @@ class Mahasiswa extends BaseController
     public function tambah()
     {
         $item = $this->request->getPost();
-        if(count($item)>0){
+        if(count($item)> 0 ){
             try {
                 $this->mhs->insert($item);
                 return redirect()->to(base_url('mahasiswa'));

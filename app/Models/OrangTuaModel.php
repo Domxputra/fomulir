@@ -8,7 +8,7 @@ class OrangTuaModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'orang_tua';
-    protected $primaryKey       = 'orang_tua';
+    protected $primaryKey       = 'orangtua';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

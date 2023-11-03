@@ -1,38 +1,35 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
-<body style="background-color: gray;">
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h4>Tambah Orang Tua</h4>
+                <h4>Tambah Jurusan</h4>
             </div>
             <form action="" method="post">
-            <div class="card-body">
+                <div class="card-body">
                     <div class="form-group">
-                      <label for="">NIK Ayah</label>
-                      <input type="text"
-                        class="form-control" name="nik_ayah" placeholder="masukkan nik ayah">
-                    </div>
-                    <div class="form-group">
-                      <label for="">Nama Ayah</label>
-                      <input type="text"
-                        class="form-control" name="nama_ayah" placeholder="masukkan Nama ayah">
+                        <label for="">Nama Ayah</label>
+                        <input type="text" class="form-control" name="nama_ayah" placeholder="Nasukkan Nama Ayah">
                     </div>
                     <div class="form-group">
-                      <label for="">NIK Ibu</label>
-                      <input type="text"
-                        class="form-control" name="nik_ibu" placeholder="masukkan nik ibu">
+                        <label for="">Nik Ayah</label>
+                        <input type="text" class="form-control" name="nik_ayah" placeholder="Nasukkan Nik Ayah">
                     </div>
                     <div class="form-group">
-                      <label for="">Nama Ibu</label>
-                      <input type="text"
-                        class="form-control" name="nama_ibu" placeholder="masukkan nama ibu">
+                        <label for="">Nama ibu</label>
+                        <input type="text" class="form-control" name="nama_ibu" placeholder="Nasukkan Nama ibu">
                     </div>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                    <div class="form-group">
+                        <label for="">Nik Ibu</label>
+                        <input type="text" class="form-control" name="nik_ibu" placeholder="Nasukkan Nik Ibu">
                     </div>
-                </form>
-            </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
+    </div>
+
 <?= $this->endSection() ?>

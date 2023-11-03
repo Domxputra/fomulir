@@ -5,7 +5,7 @@
       <div class="card">
         <div class="card-header">
           <div class="d-flex justify-content-between">
-            <h4>Daftar Vendor</h4>
+            <h4>Daftar Mahasiswa</h4>
             <a href="<?= base_url('mahasiswa/tambah') ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> Tambah</a>
           </div>
         </div>
@@ -40,8 +40,8 @@
                     <td><?= $item['sumber_biaya'] ?></td>
                     <td><?= $item['informasi'] ?></td>
                     <td>
-                    <a href="<?= base_url('mahasiswa/ubah').'/'.$item->kode?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" aria-hidden="true"></i></a>
-                    <a href="<?= base_url('mahasiswa/hapus').'/'.$item->kode?>" class="btn btn-danger btn-sm"><i class="fas fa-trash" aria-hidden="true"></i></a>
+                    <a href="<?= base_url("orangtua/ubah/") . $item['nik'] ?>" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="<?= base_url("orangtua/ubah/") . $item['nik'] ?>" class="btn btn-warning btn-sm">Edit</a>
                     </td>
                   </tr>
                 <?php endforeach ?>
