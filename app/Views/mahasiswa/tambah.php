@@ -1,8 +1,9 @@
 <?= $this->extend('layout') ?>
 <?= $this->section('content') ?>
+    <div class="container">
         <div class="card">
             <div class="card-header">
-                <h4>Ubah Jurusan</h4>
+                <h4>Tambah Mahasiswa</h4>
             </div>
             <form action="" method="post">
                 <div class="card-body">
@@ -58,4 +59,6 @@
                 </div>
             </form>
         </div>
+    </div>
+
 <?= $this->endSection() ?>
