@@ -49,7 +49,7 @@ class OrangTua extends BaseController
                 }
             }
         }else{
-            $item['item'] = $this->ot->where('orang_tua', $id)->first();
+            $item['item'] = $this->ot->where('orangtua', $id)->first();
             return view('orangtua/ubah', $item);
         } 
     }

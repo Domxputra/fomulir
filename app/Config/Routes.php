@@ -22,10 +22,10 @@ $routes->group('orang_tua', function($routes){
 });
 
 $routes->group('alamat', function($routes){
-    $routes->get('/', 'Alamat::index');
-    $routes->add('tambah', 'Alamat::tambah');
-    $routes->add('ubah/(:any)', 'Alamat::ubah/$1');
-    $routes->add('hapus/(:any)', 'Alamat::hapus/$1');
+    $routes->get('/', 'AlamatTinggal::index');
+    $routes->add('tambah', 'AlamatTinggal::tambah');
+    $routes->add('ubah/(:any)', 'AlamatTinggal::ubah/$1');
+    $routes->add('hapus/(:any)', 'AlamatTinggal::hapus/$1');
 });
 
 $routes->group('mahasiswa', function($routes){

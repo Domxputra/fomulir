@@ -14,13 +14,13 @@ class AlamatTinggal extends BaseController
     }
     public function index()
     {
-        $data['alamat'] = $this->at->findAll();
+        $data['alamat_tinggal'] = $this->at->findAll();
         return view("alamat/alamat", $data);
     }
     public function tambah()
     {
         $item = $this->request->getPost();
-        if(count($item)>0){
+        if(count($item)> 0 ){
             try {
                 $this->at->insert($item);
                 return redirect()->to(base_url('alamat'));
@@ -30,10 +30,11 @@ class AlamatTinggal extends BaseController
 
         }else return view('alamat/tambah');
     }
-    public function ubah($id)
+   
+    public function ubah($id=null)
     {
         $item = $this->request->getPost();
-        if (isset($item['ubah'])) {
+        if (isset($item['alamat'])) {
             $item = $this->request->getPost();
             if (count($item) > 0) {
                 try {
@@ -53,7 +54,9 @@ class AlamatTinggal extends BaseController
             $item['item'] = $this->at->where('kode', $id)->first();
             return view('alamat/ubah', $item);
         } 
-}
+    } 
+
+    
     public function hapus($id)
     {
         $this->at->delete($id);

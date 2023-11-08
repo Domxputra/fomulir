@@ -5,7 +5,7 @@
       <div class="card">
         <div class="card-header">
           <div class="d-flex justify-content-between">
-            <h4>Daftar Vendor</h4>
+            <h4>Daftar Alamat Tinggal</h4>
             <a href="<?= base_url('alamat/tambah') ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> Tambah</a>
           </div>
         </div>
@@ -23,7 +23,7 @@
                 </tr>
               </thead>
               <tbody>
-                <?php foreach ($alamat as $key => $item) : ?>
+                <?php foreach ($alamat_tinggal as $key => $item) : ?>
                   <tr>
                     <td>
                       <?= $key + 1 ?></td>
@@ -32,8 +32,8 @@
                     <td><?= $item['rt_rw'] ?></td>
                     <td><?= $item['kode_pos'] ?></td>
                     <td>
-                    <a href="<?= base_url('alamat/ubah').'/'.$item->kode?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" aria-hidden="true"></i></a>
-                    <a href="<?= base_url('alamat/hapus').'/'.$item->kode?>" class="btn btn-danger btn-sm"><i class="fas fa-trash" aria-hidden="true"></i></a>
+                    <a href="<?= base_url('alamat/ubah') . $item['kode'] ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit" aria-hidden="true"></i></a>
+                    <a href="<?= base_url('alamat/hapus') . $item['kode'] ?> class="btn btn-danger btn-sm"><i class="fas fa-trash" aria-hidden="true"></i></a>
                     </td>
                   </tr>
                 <?php endforeach ?>

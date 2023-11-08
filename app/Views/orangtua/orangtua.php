@@ -30,7 +30,7 @@
                                     <td><?= $item['nik_ibu'] ?></td>
                                     <td>
                                         <a href="<?= base_url("orangtua/ubah/") . $item['orangtua'] ?>" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="<?= base_url("orangtua/hapus/") . $item['orangtua'] ?>" class="btn btn-danger btn-sm">Hapus</a>
+                                        <a href="<?= base_url("orangtua/hapus/") . $item['orang_tua'] ?>" class="btn btn-danger btn-sm">Hapus</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
