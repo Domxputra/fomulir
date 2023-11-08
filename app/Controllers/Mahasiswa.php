@@ -30,6 +30,7 @@ class Mahasiswa extends BaseController
 
         }else return view('mahasiswa/tambah');
     }
+
     public function ubah($id=null)
     {
         $item = $this->request->getPost();
