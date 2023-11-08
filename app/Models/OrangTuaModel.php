@@ -7,12 +7,12 @@ use CodeIgniter\Model;
 class OrangTuaModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'orang_tua';
-    protected $primaryKey       = 'orangtua';
+    protected $table            = 'orangtua';
+    protected $primaryKey       = 'kode';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ["nik_ayah", "nik_ibu", "nama_ayah", "nama_ibu"];
-
+    protected $allowedFields    = ["nama_ayah", "nama_ibu", "nik_ayah", "nik_ibu"];
+   
 }
